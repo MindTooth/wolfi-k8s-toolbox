@@ -10,5 +10,5 @@
     "regexManagers:dockerfileVersions",
     ":separateMultipleMajorReleases"
   ],
-  "enabledManagers": ["dockerfile"]
+  "enabledManagers": ["dockerfile", "github-actions"]
 }
