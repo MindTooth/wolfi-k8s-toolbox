@@ -2,9 +2,9 @@
 name: Build, Publish, and Attest
 
 on:
-  release:
-    types:
-      - published
+  push:
+    tags:
+      - "v**"
 
 jobs:
   docker:
