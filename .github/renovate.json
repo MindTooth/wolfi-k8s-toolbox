@@ -8,7 +8,8 @@
     "schedule:automergeEarlyMondays",
     ":disableRateLimiting",
     "regexManagers:dockerfileVersions",
-    ":separateMultipleMajorReleases"
+    ":separateMultipleMajorReleases",
+    ":semanticPrefixFixDepsChoreOthers"
   ],
   "enabledManagers": ["dockerfile", "github-actions", "npm"]
 }
