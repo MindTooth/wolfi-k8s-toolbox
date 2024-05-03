@@ -4,7 +4,7 @@ name: Build, Publish, and Attest
 on:
   push:
     tags:
-      - v*
+      - "v*"
 
 jobs:
   docker:
