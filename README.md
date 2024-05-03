@@ -5,11 +5,13 @@ My initial k8s toolbox based on the wolfi-base image.
 ## Packages
 
 - argo-cd
+- bind-tools
 - curl
 - jq
 - ksops
 - kubectl
 - kustomize
+- netcat-openbsd
 - sops
 - yq
 

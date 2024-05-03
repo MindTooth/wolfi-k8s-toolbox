@@ -2,10 +2,12 @@ FROM cgr.dev/chainguard/wolfi-base:latest@sha256:35c767080978768b86904e6c6484573
 
 RUN apk add --no-cache \
   argo-cd \
+  bind-tools \
   curl \
   jq \
   ksops \
   kubectl \
   kustomize \
+  netcat-openbsd \
   sops \
   yq
