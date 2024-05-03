@@ -3,8 +3,8 @@ name: Build, Publish, and Attest
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - v*
 
 jobs:
   docker:
@@ -40,9 +40,6 @@ jobs:
         with:
           # images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           images: ${{ steps.lower-repo.outputs.IMAGE }}
-          tags: |
-            # set latest tag for default branch
-            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Log in to the Container registry
         uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3
