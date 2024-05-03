@@ -7,6 +7,7 @@ My initial k8s toolbox based on the wolfi-base image.
 - argo-cd
 - bind-tools
 - curl
+- iproute2
 - jq
 - ksops
 - kubectl

@@ -4,6 +4,7 @@ RUN apk add --no-cache \
   argo-cd \
   bind-tools \
   curl \
+  iproute2 \
   jq \
   ksops \
   kubectl \
