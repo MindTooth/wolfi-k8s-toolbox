@@ -9,5 +9,6 @@ RUN apk add --no-cache \
   kubectl \
   kustomize \
   netcat-openbsd \
+  net-tools \
   sops \
   yq

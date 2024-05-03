@@ -12,6 +12,7 @@ My initial k8s toolbox based on the wolfi-base image.
 - kubectl
 - kustomize
 - netcat-openbsd
+- net-tools
 - sops
 - yq
 
