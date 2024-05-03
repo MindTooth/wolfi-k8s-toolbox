@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       semantic-release:
-        specifier: ^23.0.8
+        specifier: 23.0.8
         version: 23.0.8
 
 packages:
