@@ -38,8 +38,11 @@ jobs:
         id: meta
         uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5
         with:
-          # images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           images: ${{ steps.lower-repo.outputs.IMAGE }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
 
       - name: Log in to the Container registry
         uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3
@@ -60,7 +63,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@897ed5eab6ed058a474202017ada7f40bfa52940 # v1
         with:
-          # subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           subject-name: ${{ steps.lower-repo.outputs.IMAGE }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
