@@ -9,7 +9,7 @@
     ":disableRateLimiting",
     "regexManagers:dockerfileVersions",
     ":separateMultipleMajorReleases",
-    ":semanticPrefixFixDepsChoreOthers"
+    ":semanticPrefixFix"
   ],
   "enabledManagers": ["dockerfile", "github-actions", "npm"]
 }
