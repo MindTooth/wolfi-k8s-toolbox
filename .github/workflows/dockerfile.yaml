@@ -61,7 +61,7 @@ jobs:
           push: true
 
       - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@897ed5eab6ed058a474202017ada7f40bfa52940 # v1
+        uses: actions/attest-build-provenance@951c0c5f8e375ad4efad33405ab77f7ded2358e4 # v1
         with:
           subject-name: ${{ steps.lower-repo.outputs.IMAGE }}
           subject-digest: ${{ steps.push.outputs.digest }}
