@@ -4,11 +4,11 @@ name: Build, Publish, and Attest
 on:
   push:
     tags:
-      - "v*"
+      - "*"
   # Let's try this one out.
-  release:
-    types:
-      - published
+  # release:
+  #   types:
+  #     - published
 
 jobs:
   docker:
