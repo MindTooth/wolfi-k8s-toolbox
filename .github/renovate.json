@@ -13,6 +13,13 @@
   "enabledManagers": ["dockerfile", "github-actions", "npm"],
 
   "packageRules": [
-    { "matchManagers": ["dockerfile"], "extends": [":semanticCommitType(fix)"] }
+    {
+      "matchManagers": ["dockerfile"],
+      "automerge": true,
+      "extends": [
+        ":semanticCommitType(fix)",
+        "schedule:automergeNonOfficeHours"
+      ]
+    }
   ]
 }
