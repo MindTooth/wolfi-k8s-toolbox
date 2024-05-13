@@ -5,11 +5,14 @@
     "config:best-practices",
     ":label(dependencies)",
     ":timezone(Europe/Berlin)",
-    "schedule:automergeEarlyMondays",
     ":disableRateLimiting",
-    "regexManagers:dockerfileVersions",
     ":separateMultipleMajorReleases",
     ":semanticPrefixFix"
   ],
-  "enabledManagers": ["dockerfile", "github-actions", "npm"]
+
+  "enabledManagers": ["dockerfile", "github-actions", "npm"],
+
+  "packageRules": [
+    { "matchManagers": ["dockerfile"], "extends": [":semanticCommitType(fix)"] }
+  ]
 }
