@@ -30,12 +30,18 @@ jobs:
         with:
           node-version: "lts/*"
 
+      - uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
           run_install: true
 
-      - name: Release
+      - name: Create Release
         env:
-          GITHUB_TOKEN: ${{ secrets.FGPAT_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         run: pnpx semantic-release
