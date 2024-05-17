@@ -37,7 +37,7 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }}
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
         with:
           run_install: true
 
