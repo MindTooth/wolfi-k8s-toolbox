@@ -7,7 +7,7 @@
     ":timezone(Europe/Berlin)",
     ":disableRateLimiting",
     ":separateMultipleMajorReleases",
-    ":semanticPrefixFix"
+    "helpers:pinGitHubActionDigestsToSemver"
   ],
 
   "enabledManagers": ["dockerfile", "github-actions", "npm"],
