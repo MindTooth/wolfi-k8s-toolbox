@@ -4,6 +4,7 @@ My initial k8s toolbox based on the wolfi-base image.
 
 ## Packages
 
+- age
 - argo-cd
 - bind-tools
 - curl
