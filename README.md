@@ -16,6 +16,7 @@ My initial k8s toolbox based on the wolfi-base image.
 - netcat-openbsd
 - net-tools
 - sops
+- vim
 - yq
 
 ##  How to use
