@@ -1,7 +1,7 @@
 {
   "name": "wolfi-k8s-toolbox",
   "devDependencies": {
-    "conventional-changelog-conventionalcommits": "7.0.2",
+    "conventional-changelog-conventionalcommits": "8.0.0",
     "semantic-release": "24.0.0"
   },
   "release": {
