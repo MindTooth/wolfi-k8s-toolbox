@@ -20,6 +20,10 @@
         ":semanticCommitType(fix)",
         "schedule:automergeNonOfficeHours"
       ]
+    },
+    {
+      "matchManagers": ["github-actions", "npm"],
+      "extends": [":automergePatch"]
     }
   ]
 }
