@@ -30,6 +30,7 @@
               {
                 "type": "chore",
                 "scope": "deps",
+                "hidden": false,
                 "section": "Dependencies"
               },
               {
