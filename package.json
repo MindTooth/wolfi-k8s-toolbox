@@ -25,13 +25,13 @@
               },
               {
                 "type": "chore",
-                "hidden": true
-              },
-              {
-                "type": "chore",
                 "scope": "deps",
                 "hidden": false,
                 "section": "Dependencies"
+              },
+              {
+                "type": "chore",
+                "hidden": true
               },
               {
                 "type": "docs",
