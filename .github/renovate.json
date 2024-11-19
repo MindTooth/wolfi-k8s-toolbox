@@ -16,10 +16,7 @@
     {
       "matchManagers": ["dockerfile"],
       "automerge": true,
-      "extends": [
-        ":semanticCommitType(fix)",
-        "schedule:automergeNonOfficeHours"
-      ]
+      "extends": ["schedule:automergeNonOfficeHours"]
     },
     {
       "matchManagers": ["github-actions", "npm"],
