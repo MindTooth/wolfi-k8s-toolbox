@@ -2,25 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 
   "extends": [
-    "config:best-practices",
+    "config:recommended",
     ":label(dependencies)",
     ":timezone(Europe/Berlin)",
-    ":disableRateLimiting",
     ":separateMultipleMajorReleases",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
 
-  "enabledManagers": ["dockerfile", "github-actions", "npm"],
-
-  "packageRules": [
-    {
-      "matchManagers": ["dockerfile"],
-      "automerge": true,
-      "extends": ["schedule:automergeNonOfficeHours"]
-    },
-    {
-      "matchManagers": ["github-actions", "npm"],
-      "extends": [":automergePatch"]
-    }
-  ]
+  "enabledManagers": ["dockerfile", "github-actions", "npm"]
 }
