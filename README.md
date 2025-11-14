@@ -24,3 +24,9 @@ My initial k8s toolbox based on the wolfi-base image.
 ```shell
 kubectl run --rm -it toolbox --image=ghcr.io/mindtooth/wolfi-k8s-toolbox --restart=Never
 ```
+
+### Debug node
+
+```shell
+kubectl debug node/<node-name> -it --image=ghcr.io/mindtooth/wolfi-k8s-toolbox --profile=sysadmin -n kube-system
+```
