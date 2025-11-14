@@ -15,6 +15,7 @@ RUN \
   ksops \
   kubectl \
   kustomize \
+  mount \
   netcat-openbsd \
   net-tools \
   sops \
