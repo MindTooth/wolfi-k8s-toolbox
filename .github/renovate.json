@@ -6,7 +6,8 @@
     ":label(dependencies)",
     ":timezone(Europe/Berlin)",
     ":separateMultipleMajorReleases",
-    "helpers:pinGitHubActionDigestsToSemver"
+    "helpers:pinGitHubActionDigestsToSemver",
+    ":maintainLockFilesWeekly"
   ],
 
   "enabledManagers": ["dockerfile", "github-actions", "npm"]
