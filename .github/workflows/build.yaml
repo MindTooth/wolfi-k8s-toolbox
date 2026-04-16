@@ -11,6 +11,9 @@ on:
     types:
       - published
 
+env:
+  REGISTRY: ghcr.io
+
 jobs:
   build:
     uses: docker/github-builder/.github/workflows/build.yml@7d2a02426d4b989616ba5aaee4e879afd4134b0d # v1.6.0
@@ -18,9 +21,6 @@ jobs:
     permissions:
       contents: read
       id-token: write
-
-    env:
-      REGISTRY: ghcr.io
 
     with:
       output: image
