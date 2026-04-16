@@ -19,6 +19,9 @@ jobs:
       contents: read
       id-token: write
 
+    env:
+      REGISTRY: ghcr.io
+
     with:
       output: image
       push: ${{ github.event_name == 'release' && github.event.action == 'published' }}
