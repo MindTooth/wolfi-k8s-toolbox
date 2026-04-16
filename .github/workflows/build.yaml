@@ -16,8 +16,10 @@ jobs:
     uses: docker/github-builder/.github/workflows/build.yml@7d2a02426d4b989616ba5aaee4e879afd4134b0d # v1.6.0
 
     permissions:
+      attestations: write
       contents: read
       id-token: write
+      packages: write
 
     with:
       output: image
