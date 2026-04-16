@@ -11,9 +11,6 @@ on:
     types:
       - published
 
-env:
-  REGISTRY: ghcr.io
-
 jobs:
   build:
     uses: docker/github-builder/.github/workflows/build.yml@7d2a02426d4b989616ba5aaee4e879afd4134b0d # v1.6.0
@@ -25,7 +22,7 @@ jobs:
     with:
       output: image
       push: ${{ github.event_name == 'release' && github.event.action == 'published' }}
-      meta-images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      meta-images: ghcr.io/${{ github.repository }}
       meta-tags: |
         type=semver,pattern={{version}}
         type=semver,pattern={{major}}.{{minor}}
@@ -33,6 +30,6 @@ jobs:
 
     secrets:
       registry-auths: |
-        - registry: ${{ env.REGISTRY }}
+        - registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
