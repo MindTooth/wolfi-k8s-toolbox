@@ -1,0 +1,35 @@
+---
+name: Build, Publish, and Attest
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    uses: docker/github-builder/.github/workflows/build.yml@v1
+
+    permissions:
+      contents: read
+      id-token: write
+
+    with:
+      output: image
+      push: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+      meta-images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      meta-tags: |
+        type=semver,pattern={{version}}
+        type=semver,pattern={{major}}.{{minor}}
+        type=semver,pattern={{major}}
+
+    secrets:
+      registry-auths: |
+        - registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
