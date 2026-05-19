@@ -72,5 +72,17 @@
       "@semantic-release/github"
     ],
     "preset": "conventionalcommits"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^26",
+      "onFail": "warn"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11",
+      "onFail": "warn"
+    }
   }
 }
