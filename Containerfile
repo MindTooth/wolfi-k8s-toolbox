@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
 
-FROM cgr.dev/chainguard/wolfi-base:latest@sha256:150a90c21d962ea400988490b629e245658391b63a1f625e847f5dea50dd3094
+FROM cgr.dev/chainguard/wolfi-base:latest@sha256:3754b6da0e1ccdab0fe46abfdd7bbbba994b593c28149f6659fa6597f2261aeb
 
 RUN \
   --mount=type=cache,target=/var/cache/apk,sharing=locked \
