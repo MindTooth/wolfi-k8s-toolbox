@@ -10,5 +10,13 @@
     ":maintainLockFilesWeekly"
   ],
 
-  "enabledManagers": ["dockerfile", "github-actions", "npm"]
+  "enabledManagers": ["dockerfile", "github-actions", "npm"],
+
+  "packageRules": [
+    {
+      "matchDatasources": ["apk"],
+      "matchFileNames": ["Containerfile"],
+      "registryUrls": ["https://packages.wolfi.dev/os?arch=x86_64"]
+    }
+  ]
 }
