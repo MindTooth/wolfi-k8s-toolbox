@@ -18,5 +18,5 @@ RUN \
   netcat-openbsd=1.238-r1 \
   net-tools=2.10-r37 \
   sops=3.13.3-r7 \
-  vim=9.2.1129-r0 \
+  vim=9.2.1132-r0 \
   yq=4.53.6-r2
