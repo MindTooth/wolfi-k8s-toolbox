@@ -5,12 +5,11 @@
     ":label(dependencies)",
     ":timezone(Europe/Berlin)",
     ":separateMultipleMajorReleases",
+    ":automergeAll",
+    ":disableRateLimiting",
     "helpers:pinGitHubActionDigestsToSemver",
     ":maintainLockFilesWeekly"
   ],
-  "automerge": true,
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 0,
   "enabledManagers": [
     "dockerfile",
     "github-actions",
