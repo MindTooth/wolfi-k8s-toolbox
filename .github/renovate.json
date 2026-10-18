@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-
   "extends": [
     "config:best-practices",
     ":label(dependencies)",
@@ -9,14 +8,24 @@
     "helpers:pinGitHubActionDigestsToSemver",
     ":maintainLockFilesWeekly"
   ],
-
-  "enabledManagers": ["dockerfile", "github-actions", "npm"],
-
+  "enabledManagers": [
+    "dockerfile",
+    "github-actions",
+    "npm"
+  ],
   "packageRules": [
     {
-      "matchDatasources": ["apk"],
-      "matchFileNames": ["Containerfile"],
-      "registryUrls": ["https://packages.wolfi.dev/os?arch=x86_64"]
+      "matchDatasources": [
+        "apk"
+      ],
+      "matchFileNames": [
+        "Containerfile"
+      ],
+      "registryUrls": [
+        "https://packages.wolfi.dev/os?arch=x86_64"
+      ],
+      "minimumReleaseAge": "3 days",
+      "minimumReleaseAgeBehaviour": "timestamp-required"
     }
   ]
 }
