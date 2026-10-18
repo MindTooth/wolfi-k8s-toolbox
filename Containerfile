@@ -10,7 +10,7 @@ RUN \
   bind-tools=9.20.29-r2 \
   curl=8.22.0-r4 \
   iproute2=7.2.0-r1 \
-  jq=1.8.2-r2 \
+  jq=1.8.2-r3 \
   ksops=4.5.1-r6 \
   kubectl-1.37-default=1.37.1-r0 \
   kustomize=5.8.2-r0 \
