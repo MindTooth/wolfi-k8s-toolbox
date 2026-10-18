@@ -5,7 +5,6 @@
     ":label(dependencies)",
     ":timezone(Europe/Berlin)",
     ":separateMultipleMajorReleases",
-    ":automergeAll",
     ":disableRateLimiting",
     "helpers:pinGitHubActionDigestsToSemver",
     ":maintainLockFilesWeekly"
@@ -27,7 +26,8 @@
         "https://packages.wolfi.dev/os?arch=x86_64"
       ],
       "minimumReleaseAge": "3 days",
-      "minimumReleaseAgeBehaviour": "timestamp-required"
+      "minimumReleaseAgeBehaviour": "timestamp-required",
+      "automerge": true
     }
   ]
 }
