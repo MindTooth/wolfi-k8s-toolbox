@@ -9,25 +9,23 @@
     "helpers:pinGitHubActionDigestsToSemver",
     ":maintainLockFilesWeekly"
   ],
-  "enabledManagers": [
-    "dockerfile",
-    "github-actions",
-    "npm"
-  ],
+  "enabledManagers": ["dockerfile", "github-actions", "npm"],
   "packageRules": [
     {
-      "matchDatasources": [
-        "apk"
-      ],
-      "matchFileNames": [
-        "Containerfile"
-      ],
-      "registryUrls": [
-        "https://packages.wolfi.dev/os?arch=x86_64"
-      ],
+      "matchDatasources": ["apk"],
+      "matchFileNames": ["Containerfile"],
+      "registryUrls": ["https://packages.wolfi.dev/os?arch=x86_64"],
       "minimumReleaseAge": "3 days",
       "minimumReleaseAgeBehaviour": "timestamp-required",
       "automerge": true
+    },
+    {
+      "description": "Release Wolfi base image updates",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["cgr.dev/chainguard/wolfi-base"],
+      "matchFileNames": ["Containerfile"],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
     }
   ]
 }

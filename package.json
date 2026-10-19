@@ -1,77 +1,9 @@
 {
   "name": "wolfi-k8s-toolbox",
   "devDependencies": {
+    "@semantic-release/release-notes-generator": "15.0.0-beta.3",
     "conventional-changelog-conventionalcommits": "10.4.0",
     "semantic-release": "25.0.9"
-  },
-  "release": {
-    "branches": [
-      "master"
-    ],
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "releaseRules": [
-            {
-              "type": "chore",
-              "scope": "deps",
-              "subject": "update cgr.dev/chainguard/wolfi-base:latest*",
-              "release": "patch"
-            }
-          ]
-        }
-      ],
-      [
-        "@semantic-release/release-notes-generator",
-        {
-          "presetConfig": {
-            "types": [
-              {
-                "type": "feat",
-                "section": "Features"
-              },
-              {
-                "type": "fix",
-                "section": "Bug Fixes"
-              },
-              {
-                "type": "chore",
-                "scope": "deps",
-                "hidden": false,
-                "section": "Dependencies"
-              },
-              {
-                "type": "chore",
-                "hidden": true
-              },
-              {
-                "type": "docs",
-                "hidden": true
-              },
-              {
-                "type": "style",
-                "hidden": true
-              },
-              {
-                "type": "refactor",
-                "hidden": true
-              },
-              {
-                "type": "perf",
-                "hidden": true
-              },
-              {
-                "type": "test",
-                "hidden": true
-              }
-            ]
-          }
-        }
-      ],
-      "@semantic-release/github"
-    ],
-    "preset": "conventionalcommits"
   },
   "devEngines": {
     "runtime": {
