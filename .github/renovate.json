@@ -28,6 +28,20 @@
       "minimumReleaseAge": "3 days",
       "minimumReleaseAgeBehaviour": "timestamp-required",
       "automerge": true
+    },
+    {
+      "description": "Release Wolfi base image updates",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "cgr.dev/chainguard/wolfi-base"
+      ],
+      "matchFileNames": [
+        "Containerfile"
+      ],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
     }
   ]
 }
