@@ -21,7 +21,8 @@
               "release": "patch"
             }
           ],
-          "preset": "conventionalcommits"
+          "preset": "conventionalcommits",
+          "presetConfig": {}
         }
       ],
       [
