@@ -1,27 +1,32 @@
 /** @type {import('semantic-release').GlobalConfig} */
 export default {
-  branches: ['master'],
+  branches: ["master"],
   plugins: [
-    ['@semantic-release/commit-analyzer', { preset: 'conventionalcommits' }],
+    ["@semantic-release/commit-analyzer", { preset: "conventionalcommits" }],
     [
-      '@semantic-release/release-notes-generator',
+      "@semantic-release/release-notes-generator",
       {
-        preset: 'conventionalcommits',
+        preset: "conventionalcommits",
         presetConfig: {
           types: [
-            { type: 'feat', section: 'Features' },
-            { type: 'fix', section: 'Bug Fixes' },
-            { type: 'chore', scope: 'deps', section: 'Dependencies', effect: 'changelog' },
-            { type: 'chore', effect: 'hidden' },
-            { type: 'docs', effect: 'hidden' },
-            { type: 'style', effect: 'hidden' },
-            { type: 'refactor', effect: 'hidden' },
-            { type: 'perf', effect: 'hidden' },
-            { type: 'test', effect: 'hidden' },
+            { type: "feat", section: "Features" },
+            { type: "fix", section: "Bug Fixes" },
+            {
+              type: "chore",
+              scope: "deps",
+              section: "Dependencies",
+              effect: "changelog",
+            },
+            { type: "chore", effect: "hidden" },
+            { type: "docs", effect: "hidden" },
+            { type: "style", effect: "hidden" },
+            { type: "refactor", effect: "hidden" },
+            { type: "perf", effect: "hidden" },
+            { type: "test", effect: "hidden" },
           ],
         },
       },
     ],
-    '@semantic-release/github',
+    "@semantic-release/github",
   ],
 };
