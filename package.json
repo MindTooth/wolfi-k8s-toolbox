@@ -1,7 +1,8 @@
 {
   "name": "wolfi-k8s-toolbox",
   "devDependencies": {
-    "conventional-changelog-angular": "9.4.0",
+    "@semantic-release/release-notes-generator": "15.0.0-beta.3",
+    "conventional-changelog-conventionalcommits": "10.4.0",
     "semantic-release": "25.0.9"
   },
   "release": {
@@ -20,18 +21,59 @@
               "release": "patch"
             }
           ],
-          "preset": "angular"
+          "preset": "conventionalcommits"
         }
       ],
       [
         "@semantic-release/release-notes-generator",
         {
-          "preset": "angular"
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "chore",
+                "scope": "deps",
+                "section": "Dependencies",
+                "effect": "changelog"
+              },
+              {
+                "type": "chore",
+                "effect": "hidden"
+              },
+              {
+                "type": "docs",
+                "effect": "hidden"
+              },
+              {
+                "type": "style",
+                "effect": "hidden"
+              },
+              {
+                "type": "refactor",
+                "effect": "hidden"
+              },
+              {
+                "type": "perf",
+                "effect": "hidden"
+              },
+              {
+                "type": "test",
+                "effect": "hidden"
+              }
+            ]
+          },
+          "preset": "conventionalcommits"
         }
       ],
       "@semantic-release/github"
-    ],
-    "preset": "angular"
+    ]
   },
   "devEngines": {
     "runtime": {
