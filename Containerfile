@@ -14,7 +14,7 @@ RUN \
   ksops=4.5.1-r6 \
   kubectl-1.37-default=1.37.1-r2 \
   kustomize=5.8.3-r0 \
-  mount=2.42.4-r0 \
+  mount=2.42.4-r1 \
   netcat-openbsd=1.238-r1 \
   net-tools=2.10-r37 \
   sops=3.13.3-r9 \
