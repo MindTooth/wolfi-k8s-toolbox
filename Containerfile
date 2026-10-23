@@ -5,7 +5,7 @@ FROM cgr.dev/chainguard/wolfi-base:latest@sha256:bc76fa39ddd1482dd56a761b3331e03
 RUN \
   --mount=type=cache,target=/var/cache/apk,sharing=locked \
   apk add --update \
-  age=1.3.2-r3 \
+  age=1.3.2-r4 \
   argo-cd-3.4=3.4.3-r1 \
   bind-tools=9.20.29-r2 \
   curl=8.23.0-r1 \
