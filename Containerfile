@@ -12,7 +12,7 @@ RUN \
   iproute2=7.3.0-r0 \
   jq=1.8.2-r3 \
   ksops=4.5.1-r6 \
-  kubectl-1.37-default=1.37.1-r2 \
+  kubectl-1.37-default=1.37.1-r3 \
   kustomize=5.8.3-r0 \
   mount=2.42.4-r1 \
   netcat-openbsd=1.239-r0 \
