@@ -7,7 +7,7 @@ RUN \
   apk add --update \
   age=1.3.2-r4 \
   argo-cd-3.4=3.4.3-r1 \
-  bind-tools=9.20.29-r2 \
+  bind-tools=9.20.30-r0 \
   curl=8.23.0-r1 \
   iproute2=7.3.0-r0 \
   jq=1.8.2-r3 \
