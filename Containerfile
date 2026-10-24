@@ -9,7 +9,7 @@ RUN \
   argo-cd-3.4=3.4.3-r1 \
   bind-tools=9.20.29-r2 \
   curl=8.23.0-r1 \
-  iproute2=7.2.0-r1 \
+  iproute2=7.3.0-r0 \
   jq=1.8.2-r3 \
   ksops=4.5.1-r6 \
   kubectl-1.37-default=1.37.1-r2 \
