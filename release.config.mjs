@@ -27,6 +27,6 @@ export default {
         },
       },
     ],
-    "@semantic-release/github",
+    ["@semantic-release/github", { successComment: false }],
   ],
 };
