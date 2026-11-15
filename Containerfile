@@ -13,7 +13,7 @@ RUN \
   jq=1.8.2-r4 \
   ksops=4.5.1-r6 \
   kubectl-1.37-default=1.37.2-r3 \
-  kustomize=5.8.3-r2 \
+  kustomize=5.8.3-r3 \
   mount=2.42.4-r2 \
   netcat-openbsd=1.239-r0 \
   net-tools=2.10-r39 \
