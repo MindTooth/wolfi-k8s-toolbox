@@ -16,7 +16,7 @@ RUN \
   kustomize=5.8.3-r3 \
   mount=2.42.4-r3 \
   netcat-openbsd=1.239-r0 \
-  net-tools=2.10-r39 \
+  net-tools=2.10-r40 \
   sops=3.13.3-r13 \
   vim=9.2.1345-r0 \
   yq=4.54.3-r1
