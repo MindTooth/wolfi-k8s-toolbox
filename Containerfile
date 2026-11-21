@@ -15,7 +15,7 @@ RUN \
   kubectl-1.37-default=1.37.2-r5 \
   kustomize=5.8.3-r3 \
   mount=2.42.4-r3 \
-  netcat-openbsd=1.239-r0 \
+  netcat-openbsd=1.239-r1 \
   net-tools=2.10-r40 \
   sops=3.13.3-r13 \
   vim=9.2.1355-r0 \
